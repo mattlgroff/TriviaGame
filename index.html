@@ -46,11 +46,11 @@
       <!-- Answers A and B -->
       <div class="row answerRow">
 
-        <div class="answerCol borderThisAnswer col-sm-6 col-xs-6 col-md-6 col-lg-6">
+        <div letter="A" id="answerRowA" class="answerCol borderThisAnswer col-sm-6 col-xs-6 col-md-6 col-lg-6">
           <p class="gold inline">A. </p><span class="white" id="answerA">20%</span>
         </div>
 
-        <div class="answerCol borderThisAnswer col-sm-6 col-xs-6 col-md-6 col-lg-6">
+        <div letter="B" id="answerRowB" class="answerCol borderThisAnswer col-sm-6 col-xs-6 col-md-6 col-lg-6">
           <p class="gold inline">B. </p><span class="white" id="answerB">40%</span>
         </div>
           
@@ -59,11 +59,11 @@
       <!-- Answers C and D -->
       <div class="row answerRow">
 
-        <div class="answerCol borderThisAnswer col-sm-6 col-xs-6 col-md-6 col-lg-6">
+        <div letter="C" id="answerRowC" class="answerCol borderThisAnswer col-sm-6 col-xs-6 col-md-6 col-lg-6">
           <p class="gold inline">C. </p><span class="white" id="answerC">60%</span>
         </div>
 
-        <div class="answerCol borderThisAnswer col-sm-6 col-xs-6 col-md-6 col-lg-6">
+        <div letter="D" id="answerRowD" class="answerCol borderThisAnswer col-sm-6 col-xs-6 col-md-6 col-lg-6">
           <p class="gold inline">D. </p><span class="white" id="answerD">Many%</span>
         </div>
           
@@ -77,7 +77,13 @@
         </div>
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <button class="btn" id="finalAnswer">Final Answer</button>
+          <div class="row">
+            <p class="white inline">Wrong Answers: </p><span class="white" id="wrongAnswers">0</span>
+          </div>
+          
+          <div class="row">  
+            <p class="white inline">Right Answers: </p><span class="white" id="rightAnswers">0</span>
+          </div>  
         </div>
 
       </div>
