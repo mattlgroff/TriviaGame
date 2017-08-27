@@ -1,0 +1,45 @@
+.gold {
+	color: #E99743;
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+.white {
+	color: #FFF;
+	font-size: 20px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.bigTitle {
+	font-size: 50px;
+}
+
+#question {
+	font-size: 30px;
+}
+
+.borderThisQuestion {
+	margin:20px;
+	border-radius: 5px 20px 5px;
+	border:1px solid #FFF;
+}
+
+.borderThisAnswer {
+	border:1px solid #FFF;
+}
+
+.answerRow {
+	margin:4px;
+}
+
+.answerCol:hover {
+	background-color: teal;
+}
+
+
+body {
+	background-color: #000;
+}
