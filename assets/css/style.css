@@ -25,6 +25,7 @@
 	margin:20px;
 	border-radius: 5px 20px 5px;
 	border:1px solid #FFF;
+	background-color: #000;
 }
 
 .borderThisAnswer {
@@ -34,6 +35,11 @@
 .answerRow {
 	margin:4px;
 }
+
+.answerCol {
+	background-color: #000;
+}
+
 
 .answerCol:hover {
 	background-color: teal;
@@ -51,6 +57,9 @@
 	background-color: red;
 }
 
+.main {
+	/*background-image: url("../images/gameBG.jpg");*/
+}
 
 body {
 	background-color: #000;

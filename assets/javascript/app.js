@@ -4,6 +4,7 @@ var questionNum = 0,
       intervalID = 0,
       timerIntervalId = 0,
       timerRunning = false,
+      defaultTime = 30,
 
       question1obj = {
         question: "What is the color of the sky?",
@@ -32,16 +33,51 @@ var questionNum = 0,
         correct: "A"
       },
 
-      questionArray = [question1obj, question2obj, question3obj],
+      question4obj = {
+        question: "Who was the principal developer of the Linux kernel?",
+        a: "Steve Jobs",
+        b: "Linus Tech Tips",
+        c: "Linus Torvalds",
+        d: "Brandon Lyon",
+        correct: "C"
+      },
+
+      question5obj = {
+        question: "Which insect shorted out an early supercomputer and inspired the term 'computer bug'?",
+        a: "Roach",
+        b: "Fly",
+        c: "Japanese Beetle",
+        d: "Moth",
+        correct: "D"
+      },
+
+      question6obj = {
+        question: "According to the Population Reference Bureau, what is the approximate number of people who have ever lived on earth?",
+        a: "9,001",
+        b: "1,337",
+        c: "100,000,000,000",
+        d: "5",
+        correct: "C"
+      },
+
+      question7obj = {
+        question: "Which word has more than 4 letters?",
+        a: "cats",
+        b: "dog",
+        c: "sky",
+        d: "pie",
+        correct: "A"
+      },
+
+      questionArray = [question1obj, question2obj, question3obj, question4obj, question5obj, question6obj, question7obj],
       currentQuestionObj = questionArray[questionNum];
 
       console.log("First question: " + currentQuestionObj.question);
 
 $(document).ready(function() {
-  //Play VictoryMusic
   document.getElementById('bgMusic').play();
   updateHTML();
-  startTimer(60);
+  startTimer(defaultTime);
 
   //  Click events
 	$(".answerCol").on("click", function(){
@@ -129,7 +165,7 @@ function newQuestion(){
 
   updateHTML();
 
-  startTimer(60);
+  startTimer(defaultTime);
 }
 
 function newGame(){
@@ -145,7 +181,7 @@ function newGame(){
 
   updateHTML();
 
-  startTimer(60);
+  startTimer(defaultTime);
 
 }
 
@@ -188,6 +224,6 @@ function updateHTML(){
   $("#wrongAnswers").text(wrong);
   $("#rightAnswers").text(right);
 
-  $("#timer").text("60 Seconds Left");
+  $("#timer").text(defaultTime + " Seconds Left");
 }
 
