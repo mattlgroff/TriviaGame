@@ -38,7 +38,8 @@ var questionNum = 0,
       console.log("First question: " + currentQuestionObj.question);
 
 $(document).ready(function() {
-
+  //Play VictoryMusic
+  document.getElementById('bgMusic').play();
   updateHTML();
   startTimer(60);
 
@@ -71,42 +72,49 @@ function clickedAnswer(scope){
 
 function rightAnswer(letterRowId){
   stopTimer(intervalID,timerIntervalId);
+  document.getElementById('bgMusic').pause();
   right++;
   updateHTML();
 
   //Makes the answer turn green. Then play a sound.
   $("#" + letterRowId).addClass('rightAnswer');
+  document.getElementById('rightAnswer').play();
 
   setTimeout( function(){
     $("#" + letterRowId).removeClass('rightAnswer');
     newQuestion();
-  }, 2000);
+  }, 5000);
 
 }
 
 function wrongAnswer(letterRowId){
   stopTimer(intervalID,timerIntervalId);
+  document.getElementById('bgMusic').pause();
   wrong++;
   updateHTML();
 
   //Makes the answer turn red. Then play a sound.
   $("#" + letterRowId).addClass('wrongAnswer');
+  document.getElementById('wrongAnswer').play();
 
   setTimeout( function(){
     $("#" + letterRowId).removeClass('wrongAnswer');
     newQuestion();
-  }, 2000);
+  }, 5000);
 
 }
 
 function timedOut(letterRowId){
   stopTimer(intervalID,timerIntervalId);
   wrong++;
+  document.getElementById('bgMusic').pause();
   newQuestion();
 
 }
 
 function newQuestion(){
+  document.getElementById('bgMusic').play();
+
   if (questionNum === questionArray.length - 1){
     questionNum = 0;
     console.log("Out of questions, starting over.");
@@ -125,6 +133,7 @@ function newQuestion(){
 }
 
 function newGame(){
+  document.getElementById('bgMusic').play();
   stopTimer(intervalID,timerIntervalId);
 
   wrong = 0;
