@@ -53,7 +53,15 @@
 	background-color: green;
 }
 
+.rightAnswer:hover {
+	background-color: green;
+}
+
 .wrongAnswer {
+	background-color: red;
+}
+
+.wrongAnswer:hover {
 	background-color: red;
 }
 

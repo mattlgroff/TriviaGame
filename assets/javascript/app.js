@@ -61,7 +61,7 @@ var questionNum = 0,
       },
 
       question7obj = {
-        question: "Which word has more than 4 letters?",
+        question: "Which word has more than 3 letters?",
         a: "cats",
         b: "dog",
         c: "sky",
